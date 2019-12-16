@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add ansible --no-cache --force
+RUN apk add ansible openssh-client --no-cache --force
 
 RUN mkdir /playbooks
 
@@ -10,4 +10,4 @@ USER ansible-user
 
 WORKDIR /playbooks
 
-CMD ["/bin/bash"]
+CMD ["/bin/sh"]
